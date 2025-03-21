@@ -1,59 +1,70 @@
-# EricWebiste
+# Seawave Angular Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+This is the frontend application for Seawave, built with Angular.
 
-## Development server
+## Branch Strategy
 
-To start a local development server, run:
+We follow a modified Git Flow workflow with the following branches:
 
-```bash
-ng serve
-```
+- `main`: Production-ready code
+- `develop`: Main development branch
+- `feature/*`: New features
+- `bugfix/*`: Bug fixes
+- `release/*`: Release preparation
+- `hotfix/*`: Emergency fixes for production
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Branch Workflow
 
-## Code scaffolding
+1. Development:
+   - Create feature branches from `develop`
+   - Name format: `feature/feature-name`
+   - Create pull request to merge back into `develop`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. Bug Fixes:
+   - Create bugfix branches from `develop`
+   - Name format: `bugfix/bug-description`
+   - Create pull request to merge back into `develop`
 
-```bash
-ng generate component component-name
-```
+3. Releases:
+   - Create release branches from `develop`
+   - Name format: `release/vX.X.X`
+   - Merge into both `main` and `develop`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+4. Hotfixes:
+   - Create hotfix branches from `main`
+   - Name format: `hotfix/description`
+   - Merge into both `main` and `develop`
 
-```bash
-ng generate --help
-```
+## Development Setup
 
-## Building
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lichungtsai611/seawave-angular.git
+   cd seawave-angular
+   ```
 
-To build the project run:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng build
-```
+3. Start development server:
+   ```bash
+   ng serve
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. Build for production:
+   ```bash
+   ng build --configuration production
+   ```
 
-## Running unit tests
+## Deployment
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+The application is deployed to: http://45.76.192.16
 
-```bash
-ng test
-```
+## Technologies Used
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Angular 17
+- TypeScript
+- SCSS
+- WordPress REST API
