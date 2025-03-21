@@ -3,11 +3,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ericWebiste": {
+    "seawave-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": true
         }
       },
       "root": "",
@@ -17,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/eric-webiste",
+            "outputPath": "dist/seawave-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ericWebiste:build:production"
+              "buildTarget": "seawave-angular:build:production"
             },
             "development": {
-              "buildTarget": "ericWebiste:build:development"
+              "buildTarget": "seawave-angular:build:development"
             }
           },
           "defaultConfiguration": "development"

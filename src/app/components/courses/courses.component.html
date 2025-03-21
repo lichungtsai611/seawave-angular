@@ -1,0 +1,14 @@
+<div class="courses-container">
+  <h1>合作案例</h1>
+  <div class="courses-grid">
+    <div class="course-card" *ngFor="let course of courses">
+      <h3>{{course.title}}</h3>
+      <p>{{course.description}}</p>
+      <div class="course-details">
+        <span>時程：{{course.duration}}</span>
+        <span>費用：{{course.price}}</span>
+      </div>
+      <button class="enroll-button">了解更多</button>
+    </div>
+  </div>
+</div> 

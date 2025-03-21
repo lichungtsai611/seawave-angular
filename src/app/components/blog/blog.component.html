@@ -1,0 +1,11 @@
+<div class="blog-container">
+    <h1>Latest Blog Posts</h1>
+    <div *ngFor="let post of posts" class="blog-post">
+      <img [src]="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : 'https://via.placeholder.com/800x400?text=No+Image'" 
+           alt="Featured image" 
+           class="blog-featured-image">
+      <a [href]="post.link" class="blog-title" target="_blank" [innerHTML]="post.title.rendered"></a>
+      <p class="blog-excerpt" [innerHTML]="post.excerpt.rendered"></p>
+      <a [href]="post.link" class="read-more" target="_blank">Read More</a>
+    </div>
+</div>

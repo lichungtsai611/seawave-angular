@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="logo">
+    <a routerLink="/">Your Logo</a>
+  </div>
+  <nav class="nav-menu">
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.path" routerLinkActive="active">{{item.label}}</a>
+      </li>
+    </ul>
+  </nav>
+</header> 
